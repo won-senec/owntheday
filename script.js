@@ -261,7 +261,7 @@ const MANTRA_COLORS = {
 
 let customMantra =
   localStorage.getItem("customMantra") ||
-  "침착하고 차분하게\n즐거운 마음으로\n나는 할수있다";
+  "Seize the day!\nYou got this!\n";
 
 function loadMantraDisplay() {
   mantraTextDiv.innerHTML = customMantra
