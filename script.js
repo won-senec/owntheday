@@ -276,10 +276,6 @@ function toggleMantraTimer() {
 }
 
 
-
-
-
-
 /************ MANTRA animating circular timer ************/
 let mantraRAF = null;
 let mantraStartTime = null;
@@ -371,11 +367,6 @@ function setMantraDuration(seconds) {
 }
 
 
-
-
-
-
-
 /**** saving Mantra in MantraEditor ****/
 
 const mantraEditor = document.getElementById("mantraEditor");
@@ -421,10 +412,6 @@ function saveMantra() {
   alert("Mantra updated!");
 }
 
-
-
-
-
 /************ NOTES (autosave) ************/
 const noteArea = document.getElementById("noteArea");
 noteArea.value = localStorage.getItem("notes") || "";
@@ -462,3 +449,8 @@ function toggleTheme() {
 /* Load saved theme */
 const savedTheme = localStorage.getItem("theme") || "light";
 applyTheme(savedTheme);
+
+/**** for app launch ****/
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
